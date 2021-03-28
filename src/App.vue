@@ -140,18 +140,18 @@ html{
 
 开源项目
 ----
-1. [基于vue.js 的电商移动端项目](https://gitee.com/zhousiwei/bootplus)
-2. [基于vue.js 的教务管理系统](https://gitee.com/zhousiwei/springboot_mybatisplus)
-3. [基于vue.js + ElementUI的电商移动端项目](https://gitee.com/zhousiwei/fastjson-spring-boot-starter)
-4. [基于c#对数据库的增删改查](https://github.com/JoeyBling/webkettle)
-5. [一个会动的简历](https://gitee.com/zhousiwei/anires)
-6. [辛跃的技术博客网站](https://gitee.com/zhousiwei/zhousiwei)
+1. [基于vue.js 的电商移动端项目](https://github.com/xinyue-cwhy/supermall)
+2. [基于vue.js 的教务管理系统](https://github.com/xinyue-cwhy/educational)
+3. [基于vue.js + ElementUI的电商移动端项目]
+4. [基于c#对数据库的增删改查]
+5. [一个会动的简历](https://github.com/xinyue-cwhy/moveme)
+6. [辛跃的技术博客网站](https://github.com/xinyue-cwhy/xinyue-cwhy.github.io)
 
 链接
 ----
-* [技术博客](https://zhousiwei.gitee.io/)
-* [GitHub](https://github.com/JoeyBling)
-* [CSDN](https://www.jianshu.com/u/02cbf31a043a)
+* [技术博客](https://github.com/xinyue-cwhy/xinyue-cwhy.github.io)
+* [GitHub](https://github.com/xinyue-cwhy/)
+* [CSDN](https://blog.csdn.net/qq_47735503)
 
 联系我
 ----
