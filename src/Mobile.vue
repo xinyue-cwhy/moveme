@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
-    <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
+    <ResumeEditor
+      ref="resumeEditor"
+      :markdown="currentMarkdown"
+      :enableHtml="enableHtml"
+    ></ResumeEditor>
   </div>
 </template>
 
@@ -13,7 +17,7 @@ export default {
   name: "app",
   components: {
     StyleEditor,
-    ResumeEditor
+    ResumeEditor,
   },
   data() {
     return {
@@ -107,7 +111,7 @@ html{
   padding: .5em;
   background: #ddd;
 }
-`
+`,
       ],
       currentMarkdown: "",
       fullMarkdown: `
@@ -135,17 +139,20 @@ html{
   - **数据库**: MySQL
   - **web 服务器**: Nginx、Tomcat
   - **OS**: Windows
-  - **Others**: Git、webpack、IDEA
+  - **Others**: Git、webpack、node
+  - **开发工具**: webstorm、vscode
 
 
 开源项目
 ----
 1. [基于vue.js 的电商移动端项目](https://github.com/xinyue-cwhy/supermall)
 2. [基于vue.js 的教务管理系统](https://github.com/xinyue-cwhy/educational)
-3. [基于vue.js + ElementUI的电商移动端项目]
+3. [基于vue.js + ElementUI的电商移动端项目](https://github.com/xinyue-cwhy/vue-el)
 4. [基于c#对数据库的增删改查]
 5. [一个会动的简历](https://github.com/xinyue-cwhy/moveme)
 6. [辛跃的技术博客网站](https://github.com/xinyue-cwhy/xinyue-cwhy.github.io)
+7. [微信小程序进行中......]
+
 链接
 ----
 * [技术博客](https://github.com/xinyue-cwhy/xinyue-cwhy.github.io)
@@ -157,21 +164,21 @@ html{
 * 联系QQ：**2644965101** | 微信：**15526645761**
 * 主要涉及技术：**前端开发****开源爱好者**
 
-`
+`,
     };
   },
   created() {
     this.makeResume();
   },
   methods: {
-    makeResume: async function() {
+    makeResume: async function () {
       await this.progressivelyShowStyle(0);
       await this.progressivelyShowResume();
       await this.progressivelyShowStyle(1);
       await this.showHtml();
       await this.progressivelyShowStyle(2);
     },
-    showHtml: function() {
+    showHtml: function () {
       return new Promise((resolve, reject) => {
         this.enableHtml = true;
         this.$nextTick(() => {
@@ -183,7 +190,7 @@ html{
     progressivelyShowStyle(n) {
       return new Promise((resolve, reject) => {
         let interval = this.interval;
-        let showStyle = async function() {
+        let showStyle = async function () {
           let style = this.fullStyle[n];
           if (!style) {
             return;
@@ -191,7 +198,7 @@ html{
           // 计算前 n 个 style 的字符总数
           let length = this.fullStyle
             .filter((_, index) => index <= n)
-            .map(item => item.length)
+            .map((item) => item.length)
             .reduce((p, c) => p + c, 0);
           let prefixLength = length - style.length;
           if (this.currentStyle.length < length) {
@@ -237,8 +244,8 @@ html{
         };
         showResume();
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
